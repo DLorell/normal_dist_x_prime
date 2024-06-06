@@ -70,7 +70,7 @@ def kl_divergence(precision_p, precision_q):
     # Calculate the KL divergence
     kl_div = 0.5 * (trace_term + log_det_term - d)
 
-    return kl_div
+    return kl_div/jnp.log(2.0)
 
 
 if __name__ == '__main__':
